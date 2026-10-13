@@ -5,33 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b0fbe3c-1535-4867-a349-0eab468c7cac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/EnumType/CourierType.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/EnumType/CourierType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/EnumType/VechileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/EnumType/VechileType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/Processing/BatchProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/Processing/BatchProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/structure/CourierDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/structure/CourierDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/structure/CourierDetailList.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/structure/CourierDetailList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/structure/CourierOrderDetailMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/structure/CourierOrderDetailMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/structure/GeoDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/structure/GeoDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/structure/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/structure/OrderDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/structure/OrderDetailList.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/structure/OrderDetailList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/utils/DistanceCalculation.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/utils/DistanceCalculation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-evaluating-algorithm/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-evaluating-algorithm/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/Processing/EvaluateProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/Processing/EvaluateProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/scorer/CostScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/scorer/CostScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/scorer/DeliveryTimeScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/scorer/DeliveryTimeScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/scorer/DistanceScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/scorer/DistanceScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/scorer/EmergencyScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/scorer/EmergencyScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/scorer/OccurScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/scorer/OccurScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/scorer/PickUpTimeScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/scorer/PickUpTimeScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/scorer/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/scorer/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-matching-algorithm/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-matching-algorithm/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/matcher/GreedySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/matcher/GreedySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/matcher/Matcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/matcher/Matcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/matcher/OrSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/matcher/OrSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/processing/MatchProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/processing/MatchProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +87,11 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="d2a26b97-f5f0-498e-8345-bbb512c08ba8" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -128,17 +111,17 @@
             </State>
           </value>
         </entry>
+        <entry key="d2a26b97-f5f0-498e-8345-bbb512c08ba8">
+          <value>
+            <State />
+          </value>
+        </entry>
       </map>
     </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/processing/Main.java</url>
           <line>13</line>

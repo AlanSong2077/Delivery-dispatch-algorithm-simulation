@@ -3,6 +3,7 @@ package Processing;
 import EnumType.VechileType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import structure.*;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.HashMap;
 import utils.DistanceCalculation;
 
 
-@Component
+@Service
 public class BatchProcessing {
 
     @Autowired

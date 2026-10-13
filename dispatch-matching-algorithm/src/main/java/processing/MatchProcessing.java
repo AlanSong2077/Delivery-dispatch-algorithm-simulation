@@ -4,6 +4,7 @@ import Processing.EvaluateProcessing;
 import matcher.GreedySearch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import structure.*;
 
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-@Component
+@Service
 public class MatchProcessing {
 
     @Autowired

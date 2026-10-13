@@ -1,12 +1,13 @@
 package Processing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import scorer.Score;
 import structure.*;
 import java.util.*;
 
 
-@Component
+@Service
 public class EvaluateProcessing {
 
     @Autowired
