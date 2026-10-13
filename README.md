@@ -1,12 +1,13 @@
 # Delivery Dispatch Algorithm Simulation
 
+<p>
+<strong>THIS FRAMEWORK IS NOT DEVELOPED BY ANY AI MODEL.</strong>
+</p>
+
 This project is a food delivery dispatch simulation framework built with Java and Spring Boot. It provides a foundation for experimenting with order batching, candidate evaluation, and courier–order matching.
 
 The system is still under development. Future work will focus on implementing, testing, and comparing dispatch algorithms through reproducible simulation scenarios, with particular attention to assignment quality, constraint handling, and computational efficiency.
 
-<p>
-<strong>THIS FRAMEWORK IS NOT DEVELOPED BY ANY AI MODEL.</strong>
-</p>
 
 ## Architecture
 
