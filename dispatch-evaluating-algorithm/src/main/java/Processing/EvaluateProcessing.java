@@ -1,4 +1,5 @@
 package Processing;
+import filter.Filter;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -26,12 +27,18 @@ public class EvaluateProcessing {
     @Autowired
     private List<Score> scoreCalculators;
 
+    @Autowired
+    private List<Filter> businessOperationFilters;
+
+    // 常量应该放到上下文去管理
+    private final int SCORE_THRESHOLD = 3;
+
     private static final Logger log = LoggerFactory.getLogger(EvaluateProcessing.class);
 
     // 注意跨模块依赖
     public HashMap<CourierDetail, List<CourierOrderScore>> Process() {
         // 数据处理
-        HashMap<CourierDetail, ArrayList<OrderDetail>> batchResult = batchProcessing.process();
+        HashMap<CourierDetail, ArrayList<OrderDetail>> batchResult = batchProcessing.Process();
         Set<Map.Entry<CourierDetail, ArrayList<OrderDetail>>> entries = batchResult.entrySet();
         HashMap<CourierDetail, List<CourierOrderScore>> evaluateResult = new HashMap<>();
 
@@ -41,11 +48,24 @@ public class EvaluateProcessing {
             ArrayList<OrderDetail> orders = entry.getValue();
             double score = scoreCal(courier, orders,scoreCalculators);
             log.info("Courier - Order Score is {}",score);
-            if(score <= 3) {
-                CourierOrderScore cos = new CourierOrderScore(orders, score);
-                // 一个骑手对应一个 List，没有就新建
-                evaluateResult.computeIfAbsent(courier, k -> new ArrayList<>()).add(cos);
+
+            //
+            if(score >= SCORE_THRESHOLD) {
+                continue;
             }
+            boolean isPass = true;
+            for (Filter businessOperationFilter : businessOperationFilters)
+                if (!businessOperationFilter.compute(courier, orders)) {
+                    isPass = false;
+                }
+            if(isPass == false){
+                continue;
+            }
+
+            CourierOrderScore cos = new CourierOrderScore(orders, score);
+            // 一个骑手对应一个 List，没有就新建
+            evaluateResult.computeIfAbsent(courier, k -> new ArrayList<>()).add(cos);
+
         }
         // 修改被过滤的订单到订单集合；把过滤掉的集合标记上
         // 这个数据结构更适合被设计为Map

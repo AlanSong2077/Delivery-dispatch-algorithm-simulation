@@ -20,7 +20,7 @@ public class BatchProcessing {
     @Autowired
     OrderDetailList orderDetailList;
 
-    public HashMap<CourierDetail, ArrayList<OrderDetail>> process(){
+    public HashMap<CourierDetail, ArrayList<OrderDetail>> Process(){
         // 把这里的处理过程写了就行
         HashMap<CourierDetail, ArrayList<OrderDetail>> courierOrderList = new HashMap<>();
         ArrayList<CourierDetail> courierList = courierDetailList.getCourierDetailArrayList();

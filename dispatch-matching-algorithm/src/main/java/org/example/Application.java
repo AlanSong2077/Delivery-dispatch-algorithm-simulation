@@ -6,11 +6,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import processing.MatchProcessing;
-import structure.CourierDetail;
-import structure.CourierDetailList;
-import structure.GeoDetail;
-import structure.OrderDetail;
-import structure.OrderDetailList;
+import structure.*;
+import java.time.Instant;
 
 import java.util.ArrayList;
 
@@ -18,7 +15,9 @@ import java.util.ArrayList;
         "org.example",
         "processing",
         "Processing",
-        "scorer"
+        "scorer",
+        "filter",
+        "matcher"
 })
 public class Application {
 
@@ -27,6 +26,13 @@ public class Application {
     }
 
     // 创建模拟骑手池
+
+    @Bean
+    public DispatchContext dispatchContext(){
+        DispatchContext dispatchContext = new DispatchContext((int) Instant.now().getEpochSecond(),1,300);
+        return dispatchContext;
+    }
+
     @Bean
     public CourierDetailList courierDetailList() {
         ArrayList<CourierDetail> couriers = new ArrayList<>();

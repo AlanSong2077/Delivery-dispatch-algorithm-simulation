@@ -117,7 +117,7 @@ public class MatchProcessing {
             if (candidateOrders.size() > courier.getAvailableCapacity()) {
                 continue;
             }
-
+            log.info("Candidate Ready: {}",candidate.getOrders().toString());
             availableCandidates.add(candidate);
         }
     }

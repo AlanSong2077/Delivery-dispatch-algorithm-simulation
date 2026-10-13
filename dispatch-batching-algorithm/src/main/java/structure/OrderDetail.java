@@ -14,9 +14,18 @@ public class OrderDetail {
     String province;
     String city;
     String distinct;
+    int mealPredictReadyTime;
 
     public GeoDetail getStartPointGeo() {
         return StartPointGeo;
+    }
+
+    public int getMealPredictReadyTime() {
+        return mealPredictReadyTime;
+    }
+
+    public void setMealPredictReadyTime(String mealPredictReadyTime) {
+        this.mealPredictReadyTime = Integer.parseInt(mealPredictReadyTime);
     }
 
     public void setStartPointGeo(GeoDetail startPointGeo) {
