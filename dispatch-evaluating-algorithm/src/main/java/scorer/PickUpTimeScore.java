@@ -7,7 +7,6 @@ import utils.DistanceCalculation;
 
 import java.util.List;
 
-@Component
 public class PickUpTimeScore implements Score {
 
     @Override

@@ -1,10 +1,14 @@
 package Processing;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import scorer.Score;
 import structure.*;
 import java.util.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 
 @Service
@@ -22,6 +26,8 @@ public class EvaluateProcessing {
     @Autowired
     private List<Score> scoreCalculators;
 
+    private static final Logger log = LoggerFactory.getLogger(EvaluateProcessing.class);
+
     // 注意跨模块依赖
     public HashMap<CourierDetail, List<CourierOrderScore>> Process() {
         // 数据处理
@@ -33,7 +39,8 @@ public class EvaluateProcessing {
 
             CourierDetail courier = entry.getKey();
             ArrayList<OrderDetail> orders = entry.getValue();
-            double score = scoreCal(courier, orders);
+            double score = scoreCal(courier, orders,scoreCalculators);
+            log.info("Courier - Order Score is {}",score);
             if(score <= 3) {
                 CourierOrderScore cos = new CourierOrderScore(orders, score);
                 // 一个骑手对应一个 List，没有就新建
@@ -63,7 +70,7 @@ public class EvaluateProcessing {
 
         }
 
-        public double scoreCal(CourierDetail courier, ArrayList<OrderDetail> ordersPair){
+        public double scoreCal(CourierDetail courier, ArrayList<OrderDetail> ordersPair,List<Score> scoreCalculators){
             double scores = 0;
             for (Score scoreCalculator : scoreCalculators) {
                     scores += scoreCalculator.score(courier,ordersPair);

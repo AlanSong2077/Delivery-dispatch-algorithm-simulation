@@ -1,5 +1,7 @@
 package processing;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import Processing.EvaluateProcessing;
 import matcher.GreedySearch;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,8 @@ public class MatchProcessing {
 
     @Autowired
     private EvaluateProcessing evaluateProcessing;
+
+    private static final Logger log = LoggerFactory.getLogger(MatchProcessing.class);
 
     public HashMap<CourierDetail, OrderDetailList> process() {
 
@@ -88,6 +92,7 @@ public class MatchProcessing {
     }
 
     private static void CandidatesCheck(List<CourierOrderScore> candidates, Set<OrderDetail> remainingOrders, CourierDetail courier, List<CourierOrderScore> availableCandidates) {
+        log.info("Start check Candidates availavle.");
         for (CourierOrderScore candidate : candidates) {
             if (candidate == null) {
                 continue;

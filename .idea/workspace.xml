@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b0fbe3c-1535-4867-a349-0eab468c7cac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/org/example/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/Processing/EvaluateProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/Processing/EvaluateProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/processing/MatchProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/processing/MatchProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +43,16 @@
   "keyToString": {
     "Application.Application.executor": "Run",
     "Application.Main.executor": "Run",
+    "Maven.dispatch-algorithm [compile].executor": "Run",
+    "Maven.dispatch-matching-algorithm [verify].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "/Users/alansong/dispatch-algorithm/dispatch-batching-algorithm/src/main/java/org/example/Main.java"
+    "onboarding.tips.debug.path": "/Users/alansong/dispatch-algorithm/dispatch-batching-algorithm/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
