@@ -1,11 +1,13 @@
 package scorer;
 
+import org.springframework.stereotype.Component;
 import structure.CourierDetail;
 import structure.OrderDetail;
 import utils.DistanceCalculation;
 
 import java.util.List;
 
+@Component
 public class PickUpTimeScore implements Score {
 
     @Override
