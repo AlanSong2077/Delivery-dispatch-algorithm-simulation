@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b0fbe3c-1535-4867-a349-0eab468c7cac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/structure/DispatchContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/filter/Filter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/filter/MealNotReadyFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/filter/TypeFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/Processing/BatchProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/Processing/BatchProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/structure/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-batching-algorithm/src/main/java/structure/OrderDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/Processing/EvaluateProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-evaluating-algorithm/src/main/java/Processing/EvaluateProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/matcher/GreedySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/matcher/GreedySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/org/example/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/org/example/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/processing/MatchProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-matching-algorithm/src/main/java/processing/MatchProcessing.java" afterDir="false" />
-    </list>
+    <list default="true" id="5b0fbe3c-1535-4867-a349-0eab468c7cac" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
