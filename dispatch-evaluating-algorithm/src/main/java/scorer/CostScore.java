@@ -1,4 +1,4 @@
-package scoreutils;
+package scorer;
 
 import structure.CourierDetail;
 import structure.OrderDetail;
@@ -7,7 +7,7 @@ import java.util.List;
 
 public class CostScore implements Score{
     @Override
-    public double Score(CourierDetail courier, List<OrderDetail> orders) {
+    public double score(CourierDetail courier, List<OrderDetail> orders) {
         if(orders.size() >= 2){
             return 0;
         }

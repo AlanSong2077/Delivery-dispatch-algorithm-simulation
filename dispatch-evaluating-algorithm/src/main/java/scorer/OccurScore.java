@@ -1,4 +1,4 @@
-package scoreutils;
+package scorer;
 
 public class OccurScore {
 }

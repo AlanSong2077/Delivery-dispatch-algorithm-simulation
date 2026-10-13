@@ -1,4 +1,4 @@
-package scoreutils;
+package scorer;
 
 import structure.CourierDetail;
 import structure.OrderDetail;
@@ -9,7 +9,7 @@ import java.util.List;
 public class DeliveryTimeScore implements Score {
 
     @Override
-    public double Score(CourierDetail i, List<OrderDetail> orders) {
+    public double score(CourierDetail i, List<OrderDetail> orders) {
         double speed = i.getSpeed();
         double startPEndpointTime = 0;
         for (OrderDetail j : orders) {

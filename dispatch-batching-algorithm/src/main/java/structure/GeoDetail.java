@@ -1,10 +1,10 @@
 package structure;
 
-public class GeoEnvDetail {
+public class GeoDetail {
     double longitude;
     double latitude;
 
-    public GeoEnvDetail(double longitude, double latitude) {
+    public GeoDetail(double longitude, double latitude) {
         this.longitude = longitude;
         this.latitude = latitude;
     }

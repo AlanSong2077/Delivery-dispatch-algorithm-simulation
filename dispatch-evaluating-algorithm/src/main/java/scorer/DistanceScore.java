@@ -1,10 +1,4 @@
-package scoreutils;
-
-import structure.CourierDetail;
-import structure.OrderDetail;
-import utils.DistanceCalculation;
-
-import java.util.List;
+package scorer;
 
 public class DistanceScore {
 }

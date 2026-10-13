@@ -2,18 +2,27 @@ package structure;
 
 import java.util.HashMap;
 
-public class CourierOrderDetailSet {
-    HashMap<CourierDetail, OrderDetailList> courierOrderDetailSet;
+public class CourierOrderDetailMap {
+    HashMap<CourierDetail, OrderDetailList> courierOrderDetailMap;
 
-    public CourierOrderDetailSet(HashMap<CourierDetail, OrderDetailList> courierOrderDetailSet) {
-        this.courierOrderDetailSet = courierOrderDetailSet;
+    double score;
+
+    public CourierOrderDetailMap(HashMap<CourierDetail, OrderDetailList> courierOrderDetailSet) {
+        this.courierOrderDetailMap = courierOrderDetailSet;
     }
 
-    public HashMap<CourierDetail, OrderDetailList> getCourierOrderDetailSet() {
-        return courierOrderDetailSet;
+    public HashMap<CourierDetail, OrderDetailList> getCourierOrderDetailMap() {
+        return courierOrderDetailMap;
     }
 
-    public void setCourierOrderDetailSet(HashMap<CourierDetail, OrderDetailList> courierOrderDetailSet) {
-        this.courierOrderDetailSet = courierOrderDetailSet;
+    public void setCourierOrderDetailMap(HashMap<CourierDetail, OrderDetailList> courierOrderDetailSet) {
+        this.courierOrderDetailMap = courierOrderDetailMap;
+    }
+    public double getScore() {
+        return score;
+    }
+
+    public void setScore(double score) {
+        this.score = score;
     }
 }
