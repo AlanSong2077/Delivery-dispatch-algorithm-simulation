@@ -131,7 +131,6 @@ public class MatchProcessing {
             List<OrderDetail> assignedOrders = entry.getValue().getOrderDetailList();
 
             for (OrderDetail order : assignedOrders) {
-
                 // 加入骑手当前配送订单集合
                 courier.addOrderDetailList(order);
                 // 记录订单对应的骑手
