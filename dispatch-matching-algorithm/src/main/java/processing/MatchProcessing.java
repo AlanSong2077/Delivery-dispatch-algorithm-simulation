@@ -138,6 +138,9 @@ public class MatchProcessing {
             }
             // 接单后减少剩余容量
             courier.setAvailableCapacity(courier.getAvailableCapacity() - assignedOrders.size());
+
+            // 更新骑手配送路径 插入节点
+            // todo
         }
     }
 }
