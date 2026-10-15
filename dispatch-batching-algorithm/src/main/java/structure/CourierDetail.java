@@ -25,6 +25,7 @@ public class CourierDetail {
     GeoDetail geoInfo;// 骑手现在的地理位置
     OrderDetailList orderDetailList;// 已指派订单集合
     GeoDetail nextPoint; // 下一个配送点的地理位置;
+    GeoDetailList deliveryPath;
 
 
     public double getPickupDistance() {
@@ -49,14 +50,6 @@ public class CourierDetail {
 
     public void setSpeed(double speed) {
         this.speed = speed;
-    }
-
-    public GeoDetail getNextPoint() {
-        return nextPoint;
-    }
-
-    public void setNextPoint(GeoDetail nextPoint) {
-        this.nextPoint = nextPoint;
     }
 
     public String getRegion() {
@@ -174,4 +167,23 @@ public class CourierDetail {
     public void setCourierId(String courierId) {
         this.courierId = courierId;
     }
+
+    // 这个其实应该设计成 private 避免被随便修改 应该一直都是GeoDetails的第一个
+    public void setNextPoint(GeoDetail nextPoint) {
+        this.nextPoint = nextPoint;
+    }
+
+    public void setNextPoint() {
+        if(this.deliveryPath.getGeoDetails().size() > 0){
+            this.nextPoint = this.deliveryPath.getGeoDetails().get(0);
+        }
+        else{
+            this.nextPoint = new GeoDetail();
+        }
+    }
+
+    public GeoDetail getNextPoint() {
+        return nextPoint;
+    }
+
 }

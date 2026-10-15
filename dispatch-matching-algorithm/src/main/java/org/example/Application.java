@@ -29,7 +29,7 @@ public class Application {
 
     @Bean
     public DispatchContext dispatchContext(){
-        DispatchContext dispatchContext = new DispatchContext((int) Instant.now().getEpochSecond(),1,300);
+        DispatchContext dispatchContext = new DispatchContext((int) Instant.now().getEpochSecond(),1,300,"test","test","test");
         return dispatchContext;
     }
 

@@ -4,8 +4,8 @@ public class OrderDetail {
     // 应该记录准备匹配的单个订单池
     String orderId;
     boolean isDispatch; // 是否准备指派；
-    GeoDetail StartPointGeo; // 订单的地理位置；
-    GeoDetail EndPointGeo; // 订单的地理位置；
+    GeoDetail StartPointGeo; // 订单的起点地理位置；
+    GeoDetail EndPointGeo; // 订单的终点地理位置；
     boolean isReady; //餐是否备好；
     int Price; //餐品价格；
     CourierDetailList courierDetailSet; // 过去已指派骑手集合

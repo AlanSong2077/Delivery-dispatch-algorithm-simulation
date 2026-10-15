@@ -9,6 +9,9 @@ public class GeoDetail {
         this.latitude = latitude;
     }
 
+    public GeoDetail() {
+    }
+
     public double getLongitude() {
         return longitude;
     }

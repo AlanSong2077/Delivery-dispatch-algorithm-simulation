@@ -49,4 +49,6 @@ public class DistanceCalculation {
         return Math.toDegrees(Math.acos(cos));
     }
 
+    // 这里需要维护每个骑手的配送路径
+
  }
