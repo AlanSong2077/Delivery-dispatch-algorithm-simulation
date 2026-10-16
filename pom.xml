@@ -43,6 +43,12 @@
             <artifactId>ortools-java</artifactId>
             <version>9.12.4544</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.18.0</version>
+        </dependency>
     </dependencies>
 
 </project>

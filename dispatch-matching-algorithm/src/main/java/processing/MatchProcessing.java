@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import structure.*;
+import utils.DistanceCalculation;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -130,6 +131,12 @@ public class MatchProcessing {
 
             List<OrderDetail> assignedOrders = entry.getValue().getOrderDetailList();
 
+            // 先在副本上完成路径计算，避免计算失败时提前修改订单归属和容量。
+            GeoDetailList updatedPath = insertDeliveryNodes(courier, assignedOrders);
+            if (courier.getOrderDetailList() == null) {
+                courier.setOrderDetailList(new OrderDetailList());
+            }
+
             for (OrderDetail order : assignedOrders) {
                 // 加入骑手当前配送订单集合
                 courier.addOrderDetailList(order);
@@ -140,7 +147,51 @@ public class MatchProcessing {
             courier.setAvailableCapacity(courier.getAvailableCapacity() - assignedOrders.size());
 
             // 更新骑手配送路径 插入节点
-            // todo
+            courier.setDeliveryPath(updatedPath);
         }
+    }
+
+    private static GeoDetailList insertDeliveryNodes(CourierDetail courier, List<OrderDetail> orders) {
+        ArrayList<GeoDetail> path = courier.getDeliveryPath() == null
+                ? new ArrayList<>() : new ArrayList<>(courier.getDeliveryPath().getGeoDetails());
+
+        for (OrderDetail order : orders) {
+            if (courier.getGeoInfo() == null || order.getStartPointGeo() == null
+                    || order.getEndPointGeo() == null) {
+                throw new IllegalArgumentException("插入配送节点需要骑手位置、取餐点和送达点");
+            }
+            double bestDistance = Double.POSITIVE_INFINITY;
+            ArrayList<GeoDetail> bestPath = null;
+            // 枚举取餐点和送达点位置，保持旧路径顺序，且送达点必须在取餐点之后。
+            // 原路径长度固定，最小化新路径总长度等价于最小化增量距离。
+            for (int pickupIndex = 0; pickupIndex <= path.size(); pickupIndex++) {
+                for (int deliveryIndex = pickupIndex + 1; deliveryIndex <= path.size() + 1; deliveryIndex++) {
+                    ArrayList<GeoDetail> candidate = new ArrayList<>(path);
+                    candidate.add(pickupIndex, order.getStartPointGeo());
+                    candidate.add(deliveryIndex, order.getEndPointGeo());
+                    double distance = pathDistance(courier.getGeoInfo(), candidate);
+                    if (distance < bestDistance) {
+                        bestDistance = distance;
+                        bestPath = candidate;
+                    }
+                }
+            }
+            if (bestPath == null) {
+                throw new IllegalArgumentException("配送路径坐标必须能计算有限距离");
+            }
+            path = bestPath;
+        }
+        return new GeoDetailList(path);
+    }
+
+    private static double pathDistance(GeoDetail start, List<GeoDetail> path) {
+        double distance = 0;
+        GeoDetail previous = start;
+        for (GeoDetail point : path) {
+            distance += DistanceCalculation.geoCalculation(previous.getLongitude(), previous.getLatitude(),
+                    point.getLongitude(), point.getLatitude());
+            previous = point;
+        }
+        return distance;
     }
 }

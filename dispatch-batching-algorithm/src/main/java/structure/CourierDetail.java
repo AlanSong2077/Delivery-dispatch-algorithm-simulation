@@ -186,4 +186,13 @@ public class CourierDetail {
         return nextPoint;
     }
 
+    public GeoDetailList getDeliveryPath() {
+        return deliveryPath;
+    }
+
+    public void setDeliveryPath(GeoDetailList deliveryPath) {
+        this.deliveryPath = deliveryPath;
+        setNextPoint();
+    }
+
 }
